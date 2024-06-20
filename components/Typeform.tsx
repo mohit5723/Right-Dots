@@ -434,8 +434,7 @@ const CustomForm = () => {
 						<div className="bg-cover h-[100vh] w-[100vw] gap-4 flex flex-col lg:flex-row justify-center items-center">
 							<div className="flex flex-col justify-center items-start w-[90vw] md:w-auto">
 								<h1>
-									Did you know that you could potentially save $100,000 on your
-									home loan?
+                Take this survey to discover the strengths and areas for improvement in your company's volunteering initiatives.
 								</h1>
 								<button
 									className="text-gray-500 my-5 font-bold bg-white rounded-sm flex justify-center items-center p-3 hover:bg-gray-900 hover:text-white"

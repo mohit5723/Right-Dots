@@ -444,7 +444,7 @@
         
         </div>
 
-        <div className="contactFormWrapper text-white bg-[#771770] bg-cover h-[100vh] w-[100vw] flex flex-col justify-center items-center">
+        <div className="contactFormWrapper text-white bg-[#771770] bg-cover h-[100vh] w-[100vw] flex flex-col justify-center items-center " style={{padding:"20px"}}>
           <div className="formheader"></div>
           <div className="formcontact">
             {firstPage && !submit && (

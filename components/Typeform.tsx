@@ -140,7 +140,7 @@ interface FormData {
 
        const labeledData: { [key: string]: any } = {}; 
       questions.forEach((question) => {
-        labeledData[question.label] = formData[question.id];
+        labeledData[question.label] = formData[question.idas keyof FormData] as string;
       });
 
     

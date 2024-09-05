@@ -3,6 +3,15 @@
   import { useEffect } from 'react';
   import img from './Screenshot_2024-06-20_230518-removebg-preview.png';
 
+  interface Question {
+  id: string;
+  label: string;
+}
+
+interface FormData {
+  [key: string]: any; // formData can have dynamic string keys with any value
+}
+
   const CustomForm = () => {
     const [submit, setSubmit] = useState(false);
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -129,7 +138,7 @@
       }
     
 
-      const labeledData = {};
+       const labeledData: { [key: string]: any } = {}; 
       questions.forEach((question) => {
         labeledData[question.label] = formData[question.id];
       });

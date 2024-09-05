@@ -4,7 +4,7 @@
   import img from './Screenshot_2024-06-20_230518-removebg-preview.png';
 
   interface Question {
-  id: string;
+  id: string | number;
   label: string;
 }
 
@@ -144,7 +144,7 @@ interface FormData {
        const labeledData: { [key: string]: any } = {}; 
       questions.forEach((question) => {
         const key = question.id.toString();
-        labeledData[question.label] = formData[key as keyof FormData] as string;
+        labeledData[question.label] = formData[key] as string;
       });
 
     

@@ -144,7 +144,7 @@ interface FormData {
        const labeledData: { [key: string]: any } = {}; 
       questions.forEach((question) => {
         const key = question.id.toString();
-        labeledData[question.label] = formData[question.id as keyof FormData] as string;
+        labeledData[question.label] = formData[key as keyof FormData] as string;
       });
 
     

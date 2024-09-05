@@ -137,7 +137,10 @@ interface FormData {
         return;
       }
     
-
+        type FormData = {
+          [key: string]: string; // Ensure this is present
+          // other specific fields can be defined here as well
+        };
        const labeledData: { [key: string]: any } = {}; 
       questions.forEach((question) => {
         labeledData[question.label] = formData[question.id as keyof FormData] as string;

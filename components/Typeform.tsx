@@ -9,7 +9,7 @@
 }
 
 interface FormData {
-  [key: string]: any; // formData can have dynamic string keys with any value
+  [key: string]:  string; // formData can have dynamic string keys with any value
 }
 
   const CustomForm = () => {

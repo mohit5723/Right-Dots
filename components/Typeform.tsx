@@ -1,5 +1,5 @@
   'use client';
-  import React, { useState } from 'react';
+  import React, { useState , FormEvent } from 'react';
   import { useEffect } from 'react';
   import img from './Screenshot_2024-06-20_230518-removebg-preview.png';
 
@@ -120,7 +120,7 @@
       }
     };
 
-    async function handleSubmit(e) {
+    async function handleSubmit(e: FormEvent<HTMLFormElement>) {
       e.preventDefault();
       setSubmit(true);
     

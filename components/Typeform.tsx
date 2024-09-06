@@ -1,7 +1,16 @@
   'use client';
-  import React, { useState } from 'react';
+  import React, { useState , FormEvent } from 'react';
   import { useEffect } from 'react';
   import img from './Screenshot_2024-06-20_230518-removebg-preview.png';
+
+  interface Question {
+  id: string | number;
+  label: string;
+}
+
+interface FormData {
+  [key: string]:  string; // formData can have dynamic string keys with any value
+}
 
   const CustomForm = () => {
     const [submit, setSubmit] = useState(false);
@@ -120,7 +129,7 @@
       }
     };
 
-    async function handleSubmit(e) {
+    async function handleSubmit(e: FormEvent<HTMLFormElement>) {
       e.preventDefault();
       setSubmit(true);
     
@@ -128,10 +137,14 @@
         return;
       }
     
-
-      const labeledData = {};
+        type FormData = {
+          [key: string]: string; 
+         
+        };
+       const labeledData: { [key: string]: any } = {}; 
       questions.forEach((question) => {
-        labeledData[question.label] = formData[question.id];
+        const key = question.id.toString();
+        labeledData[question.label] = formData[key as keyof typeof formData] as string;
       });
 
     
